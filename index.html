@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Harsh Patel — Full-Stack Developer (In Training)</title>
+<meta name="description" content="Harsh Patel — B.Tech Information Technology student and aspiring full-stack developer based in Gandhinagar, India. Portfolio of projects, skills, and contact info.">
+<meta name="keywords" content="Harsh Patel, Full Stack Developer, IT Student, Web Developer, Gandhinagar, Portfolio">
+<meta name="author" content="Harsh Patel">
+
+<meta property="og:title" content="Harsh Patel — Full-Stack Developer (In Training)">
+<meta property="og:description" content="B.Tech IT student building real projects and looking for an internship. Explore my skills and work.">
+<meta property="og:type" content="website">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body data-theme="dark">
+
+<!-- Interactive background canvas -->
+<canvas id="bg-canvas"></canvas>
+<div class="glow-blob" id="glow-blob"></div>
+
+<!-- ============ TOP EDITOR BAR ============ -->
+<header class="editor-shell">
+  <div class="editor-titlebar">
+    <div class="traffic-lights">
+      <span class="dot red"></span>
+      <span class="dot yellow"></span>
+      <span class="dot green"></span>
+    </div>
+    <span class="titlebar-label">harsh-patel — portfolio</span>
+    <button id="theme-toggle" class="theme-toggle" aria-label="Toggle dark and light mode">
+      <span class="theme-icon">🌙</span>
+    </button>
+  </div>
+
+  <nav class="tab-bar" aria-label="Primary navigation">
+    <button class="tab active" data-target="home">
+      <span class="tab-icon">◆</span>home.html
+    </button>
+    <button class="tab" data-target="about">
+      <span class="tab-icon">◇</span>about.md
+    </button>
+    <button class="tab" data-target="skills">
+      <span class="tab-icon">{ }</span>skills.json
+    </button>
+    <button class="tab" data-target="projects">
+      <span class="tab-icon">▸</span>projects/
+    </button>
+    <button class="tab" data-target="contact">
+      <span class="tab-icon">λ</span>contact.js
+    </button>
+  </nav>
+
+  <!-- mobile nav toggle -->
+  <button id="mobile-nav-toggle" class="mobile-nav-toggle" aria-label="Open navigation menu">☰</button>
+</header>
+
+<main>
+
+  <!-- ============ HOME / HERO ============ -->
+  <section id="home" class="section hero-section">
+    <div class="line-numbers" aria-hidden="true">
+      <span>1</span><span>2</span><span>3</span><span>4</span><span>5</span><span>6</span><span>7</span>
+    </div>
+    <div class="hero-content">
+      <p class="code-comment">// welcome to my portfolio</p>
+      <p class="code-line"><span class="kw">const</span> <span class="var">developer</span> <span class="op">=</span> <span class="brace">{</span></p>
+      <p class="code-line indent"><span class="prop">name:</span> <span class="str">"Harsh Patel"</span>,</p>
+      <p class="code-line indent"><span class="prop">role:</span> <span class="str typing-target" id="typed-role"></span><span class="cursor">▌</span>,</p>
+      <p class="code-line indent"><span class="prop">status:</span> <span class="str">"open to internships"</span>,</p>
+      <p class="code-line indent"><span class="prop">location:</span> <span class="str">"Gandhinagar, India"</span></p>
+      <p class="code-line"><span class="brace">}</span><span class="op">;</span></p>
+
+      <div class="hero-cta">
+        <a href="#projects" class="btn btn-primary" data-target="projects">
+          <span>./view-projects</span>
+        </a>
+        <a href="#contact" class="btn btn-ghost" data-target="contact">
+          <span>./get-in-touch</span>
+        </a>
+      </div>
+
+      <div class="hero-socials">
+        <a href="https://github.com/" target="_blank" rel="noopener" aria-label="GitHub profile">GitHub</a>
+        <span class="dot-sep">·</span>
+        <a href="https://in.linkedin.com/in/harsh-patel-402121369" target="_blank" rel="noopener" aria-label="LinkedIn profile">LinkedIn</a>
+        <span class="dot-sep">·</span>
+        <a href="mailto:harshrpatel14491@gmail.com" aria-label="Send email">Email</a>
+      </div>
+    </div>
+    <button class="scroll-hint" data-target="about" aria-label="Scroll to About section">
+      <span>scroll</span>
+      <span class="scroll-arrow">↓</span>
+    </button>
+  </section>
+
+  <!-- ============ ABOUT ============ -->
+  <section id="about" class="section about-section">
+    <div class="section-header">
+      <span class="file-tag">about.md</span>
+      <h2>About Me</h2>
+    </div>
+
+    <div class="about-grid">
+      <div class="about-card avatar-card">
+        <div class="avatar-placeholder" aria-hidden="true">
+          <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+            <rect width="200" height="200" rx="20" fill="var(--surface-2)"/>
+            <circle cx="100" cy="78" r="34" fill="var(--accent)" opacity="0.85"/>
+            <path d="M40 175 C40 130 70 108 100 108 C130 108 160 130 160 175 Z" fill="var(--accent)" opacity="0.85"/>
+          </svg>
+        </div>
+        <div class="status-badge">
+          <span class="pulse-dot"></span> Fresher · Actively seeking internship
+        </div>
+      </div>
+
+      <div class="about-card bio-card">
+        <p class="markdown-line"># Harsh Patel</p>
+        <p class="bio-text">
+          Detail-oriented and motivated third-year B.Tech Information Technology student with a growing interest
+          in software development and web technologies. I like turning ideas into working interfaces, learning
+          fast, and figuring out the rest as I go. Currently looking for a technical internship where I can apply
+          what I've learned in the classroom to real, hands-on projects — and pick up everything the classroom
+          doesn't teach.
+        </p>
+        <ul class="bio-tags">
+          <li>Team collaboration</li>
+          <li>Fast learner</li>
+          <li>Problem solving</li>
+          <li>Time management</li>
+        </ul>
+      </div>
+
+      <div class="about-card facts-card">
+        <p class="card-label">// quick facts</p>
+        <dl class="facts-list">
+          <div class="fact-row">
+            <dt>Education</dt>
+            <dd>B.Tech, Information Technology<br><span class="muted">Institute of Advanced Research, Gandhinagar</span></dd>
+          </div>
+          <div class="fact-row">
+            <dt>Timeline</dt>
+            <dd>June 2023 – May 2027 <span class="muted">(3rd year)</span></dd>
+          </div>
+          <div class="fact-row">
+            <dt>CGPA</dt>
+            <dd>7.6 / 10</dd>
+          </div>
+          <div class="fact-row">
+            <dt>Location</dt>
+            <dd>Gandhinagar, India</dd>
+          </div>
+          <div class="fact-row">
+            <dt>Languages</dt>
+            <dd>Hindi, English, Gujarati</dd>
+          </div>
+        </dl>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ SKILLS ============ -->
+  <section id="skills" class="section skills-section">
+    <div class="section-header">
+      <span class="file-tag">skills.json</span>
+      <h2>Skills</h2>
+    </div>
+
+    <div class="skills-grid">
+      <div class="skill-block">
+        <p class="skill-key">"languages"</p>
+        <div class="chip-row">
+          <span class="chip">C</span>
+          <span class="chip">C++</span>
+          <span class="chip">Java</span>
+          <span class="chip">Python</span>
+        </div>
+      </div>
+
+      <div class="skill-block">
+        <p class="skill-key">"web"</p>
+        <div class="chip-row">
+          <span class="chip">HTML</span>
+          <span class="chip">CSS</span>
+          <span class="chip">Frontend Fundamentals</span>
+          <span class="chip">UI / UX</span>
+        </div>
+      </div>
+
+      <div class="skill-block">
+        <p class="skill-key">"tools"</p>
+        <div class="chip-row">
+          <span class="chip">Microsoft Excel</span>
+          <span class="chip">ChatGPT</span>
+          <span class="chip">Canva AI</span>
+        </div>
+      </div>
+
+      <div class="skill-block">
+        <p class="skill-key">"foundations"</p>
+        <div class="chip-row">
+          <span class="chip">OOP</span>
+          <span class="chip">Data Structures (basics)</span>
+          <span class="chip">Problem Solving</span>
+        </div>
+      </div>
+    </div>
+
+    <p class="skills-note">// still compiling — learning something new every semester</p>
+  </section>
+
+  <!-- ============ PROJECTS ============ -->
+  <section id="projects" class="section projects-section">
+    <div class="section-header">
+      <span class="file-tag">projects/</span>
+      <h2>Projects</h2>
+    </div>
+
+    <div class="project-search-bar">
+      <span class="search-icon">🔍</span>
+      <input type="text" id="project-search" placeholder="Search projects by name or tech (e.g. Java, e-commerce)..." aria-label="Search projects">
+    </div>
+
+    <div class="projects-grid" id="projects-grid">
+
+      <article class="project-card" data-search="cryptocurrency frontend application java ui ux">
+        <div class="project-window-bar">
+          <span class="dot red"></span><span class="dot yellow"></span><span class="dot green"></span>
+          <span class="project-filename">crypto-frontend.java</span>
+        </div>
+        <div class="project-body">
+          <h3>Cryptocurrency Frontend Application</h3>
+          <p>
+            A responsive, user-friendly frontend interface for a cryptocurrency application — showing live-style
+            prices and coin information with a focus on clean UI design and usability.
+          </p>
+          <ul class="project-highlights">
+            <li>Built a responsive interface from scratch</li>
+            <li>Displayed cryptocurrency prices and related data</li>
+            <li>Prioritized clean layout and everyday usability</li>
+          </ul>
+          <div class="chip-row small">
+            <span class="chip">Java</span>
+            <span class="chip">UI Design</span>
+          </div>
+          <div class="project-links">
+            <a href="https://github.com/" target="_blank" rel="noopener">View on GitHub →</a>
+          </div>
+        </div>
+      </article>
+
+      <article class="project-card" data-search="full stack e-commerce website java python html razorpay">
+        <div class="project-window-bar">
+          <span class="dot red"></span><span class="dot yellow"></span><span class="dot green"></span>
+          <span class="project-filename">ecommerce-app.py</span>
+        </div>
+        <div class="project-body">
+          <h3>Full Stack E-Commerce Website</h3>
+          <p>
+            A full stack e-commerce web application built using a mix of AI-assisted tooling and hands-on coding —
+            covering product listings, pricing, and the core purchase flow end to end.
+          </p>
+          <ul class="project-highlights">
+            <li>Product listing with details, pricing, and purchase flow</li>
+            <li>Connected frontend and backend for a smooth user experience</li>
+            <li>Razorpay payment gateway integration <span class="status-chip">in progress</span></li>
+          </ul>
+          <div class="chip-row small">
+            <span class="chip">Java</span>
+            <span class="chip">Python</span>
+            <span class="chip">HTML</span>
+            <span class="chip">Razorpay</span>
+          </div>
+          <div class="project-links">
+            <a href="https://github.com/" target="_blank" rel="noopener">View on GitHub →</a>
+          </div>
+        </div>
+      </article>
+
+    </div>
+    <p class="no-results" id="no-results" hidden>No projects match that search — try a different keyword.</p>
+  </section>
+
+  <!-- ============ CONTACT ============ -->
+  <section id="contact" class="section contact-section">
+    <div class="section-header">
+      <span class="file-tag">contact.js</span>
+      <h2>Get in Touch</h2>
+    </div>
+
+    <div class="contact-grid">
+      <div class="contact-info">
+        <p class="card-label">// reach me directly</p>
+        <a class="contact-line" href="mailto:harshrpatel14491@gmail.com">
+          <span class="contact-icon">✉️</span> harshrpatel14491@gmail.com
+        </a>
+        <a class="contact-line" href="tel:+918200256680">
+          <span class="contact-icon">📞</span> +91 82002 56680
+        </a>
+        <a class="contact-line" href="https://in.linkedin.com/in/harsh-patel-402121369" target="_blank" rel="noopener">
+          <span class="contact-icon">🔗</span> linkedin.com/in/harsh-patel-402121369
+        </a>
+        <a class="contact-line" href="https://github.com/" target="_blank" rel="noopener">
+          <span class="contact-icon">💻</span> github.com/
+        </a>
+        <p class="contact-line static">
+          <span class="contact-icon">📍</span> Gandhinagar, India
+        </p>
+      </div>
+
+      <form class="contact-form" id="contact-form">
+        <p class="card-label">// send a message</p>
+        <label for="name">Name</label>
+        <input type="text" id="name" name="name" placeholder="Your name" required>
+
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" placeholder="you@example.com" required>
+
+        <label for="message">Message</label>
+        <textarea id="message" name="message" rows="5" placeholder="Say hello, or tell me about an opportunity..." required></textarea>
+
+        <button type="submit" class="btn btn-primary full-width">
+          <span>./send-message</span>
+        </button>
+        <p class="form-note" id="form-note" hidden>Opening your email app with this message ready to send...</p>
+      </form>
+    </div>
+  </section>
+
+  <footer class="site-footer">
+    <p>Built by Harsh Patel · <span id="footer-year"></span></p>
+  </footer>
+
+</main>
+
+<script src="script.js"></script>
+</body>
+</html>
