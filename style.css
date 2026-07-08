@@ -356,6 +356,16 @@ main {
 .avatar-card { display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 20px; text-align: center; }
 .avatar-placeholder { position: relative; }
 .avatar-placeholder svg { width: 130px; height: 130px; position: relative; z-index: 1; }
+.profile-photo {
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 3px solid var(--accent);
+  position: relative;
+  z-index: 1;
+  display: block;
+}
 .avatar-placeholder::before {
   content: "";
   position: absolute;
