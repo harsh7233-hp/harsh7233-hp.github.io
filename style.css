@@ -120,11 +120,13 @@ main {
 
 .titlebar-label {
   font-family: var(--font-mono);
-  font-size: 0.82rem;
+  font-size: 0.95rem;
+  font-weight: 600;
   color: var(--text-muted);
   flex: 1;
   text-align: center;
   letter-spacing: 0.02em;
+  transition: color 0.2s ease;
 }
 
 .theme-toggle {
@@ -153,12 +155,13 @@ main {
 
 .tab {
   font-family: var(--font-mono);
-  font-size: 0.9rem;
+  font-size: 1.05rem;
+  font-weight: 600;
   background: transparent;
   border: none;
   border-right: 1px solid var(--border);
   color: var(--text-muted);
-  padding: 0 20px;
+  padding: 0 22px;
   height: 100%;
   cursor: pointer;
   white-space: nowrap;
