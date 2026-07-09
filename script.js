@@ -45,7 +45,16 @@ mobileNavToggle.addEventListener('click', () => {
   tabBar.classList.toggle('open');
 });
 
-// Highlight active tab based on scroll position
+// Highlight active tab based on scroll position + update titlebar label
+const sectionNames = {
+  home: 'Home',
+  about: 'About',
+  skills: 'Skills',
+  projects: 'Projects',
+  contact: 'Contact'
+};
+const titlebarLabel = document.getElementById('titlebar-label');
+
 const observerOptions = { root: null, rootMargin: '-45% 0px -45% 0px', threshold: 0 };
 const sectionObserver = new IntersectionObserver((entries) => {
   entries.forEach(entry => {
@@ -54,6 +63,9 @@ const sectionObserver = new IntersectionObserver((entries) => {
       tabs.forEach(tab => {
         tab.classList.toggle('active', tab.getAttribute('data-target') === id);
       });
+      if (titlebarLabel && sectionNames[id]) {
+        titlebarLabel.textContent = sectionNames[id];
+      }
     }
   });
 }, observerOptions);
