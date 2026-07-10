@@ -50,6 +50,7 @@ const sectionNames = {
   home: 'Home',
   about: 'About',
   skills: 'Skills',
+  achievements: 'Achievements',
   projects: 'Projects',
   contact: 'Contact'
 };
