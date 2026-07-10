@@ -213,7 +213,7 @@ main {
 
 .achievements-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(260px, 340px));
   gap: 26px;
 }
 .achievement-card {
@@ -257,6 +257,12 @@ main {
 .demo-link {
   margin-left: 18px;
   color: var(--amber) !important;
+}
+.desktop-note {
+  margin-left: 18px;
+  font-family: var(--font-mono);
+  font-size: 0.85rem;
+  color: var(--text-muted);
 }
 
 .section {
