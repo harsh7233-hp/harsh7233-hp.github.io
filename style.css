@@ -192,6 +192,73 @@ main {
   cursor: pointer;
 }
 
+.resume-btn {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-family: var(--font-mono);
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--bg);
+  background: linear-gradient(100deg, var(--accent), var(--amber));
+  border: none;
+  border-radius: var(--radius-sm);
+  padding: 6px 14px;
+  text-decoration: none;
+  white-space: nowrap;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.resume-btn:hover { transform: translateY(-2px); box-shadow: 0 6px 18px rgba(179,136,255,0.35); }
+.resume-icon { font-size: 0.9rem; }
+
+.achievements-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 26px;
+}
+.achievement-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  padding: 28px 26px;
+  text-align: center;
+  transition: transform 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease;
+}
+.achievement-card:hover {
+  transform: translateY(-5px);
+  border-color: var(--accent-dim);
+  box-shadow: var(--shadow);
+}
+.achievement-icon {
+  font-size: 2.4rem;
+  margin-bottom: 14px;
+}
+.achievement-card h3 {
+  font-family: var(--font-mono);
+  font-size: 1.15rem;
+  margin: 0 0 10px;
+}
+.achievement-card p {
+  color: var(--text-muted);
+  font-size: 0.95rem;
+  margin: 0;
+}
+.achievement-link {
+  display: inline-block;
+  margin-top: 14px;
+  font-family: var(--font-mono);
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--accent);
+  text-decoration: none;
+}
+.achievement-link:hover { text-decoration: underline; }
+
+.demo-link {
+  margin-left: 18px;
+  color: var(--amber) !important;
+}
+
 .section {
   min-height: 100vh;
   padding: 100px 8vw 80px;
